@@ -81,7 +81,7 @@ def ask(question: str, db_path: str = None, system_prompt: str = None) -> str:
     client = genai.Client(api_key=api_key)
 
     response = client.models.generate_content(
-        model="gemini-2.0-flash",
+        model="gemini-3.6-flash",
         contents=f"Question: {question}",
         config=genai.types.GenerateContentConfig(
             system_instruction=system_prompt,
